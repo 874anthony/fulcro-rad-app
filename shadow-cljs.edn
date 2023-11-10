@@ -3,9 +3,9 @@
  :jvm-opts ["-Xmx2G"]
  :builds   {:main     {:target     :browser
                        :output-dir "resources/public/js/main"
-                       :asset-path "/js/main"
                        :dev        {:compiler-options {:external-config {:guardrails {:emit-spec? true :throw? false}}}}
-                       :modules    {:main {:init-fn com.example.client/init}}
+                       :asset-path "/js/main"
+                       :modules    {:main {:init-fn com.todos.client/init}}
                        :js-options {:resolve
                                     {
                                      ;; for performance checking during dev
@@ -19,5 +19,5 @@
                                      {:target  :npm
                                       :require "@js-joda/timezone/dist/js-joda-timezone-10-year-range.min.js"}}}
                        :devtools   {:preloads   [com.fulcrologic.fulcro.inspect.preload]
-                                    :after-load com.example.client/refresh}}
+                                    :after-load com.todos.client/refresh}}
                     }}

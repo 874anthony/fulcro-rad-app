@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/dev" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/shared" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/datomic" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -31,6 +32,7 @@
     <orderEntry type="library" name="Deps: com.google.auto.value/auto-value-annotations:1.6" level="project" />
     <orderEntry type="library" name="Deps: edn-query-language/eql:1.0.2" level="project" />
     <orderEntry type="library" name="Deps: io.undertow/undertow-core:2.2.4.Final" level="project" />
+    <orderEntry type="library" name="Deps: com.datomic/client-api:1.0.67" level="project" />
     <orderEntry type="library" name="Deps: expound:0.9.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/spec.alpha:0.3.218" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/tools.cli:1.0.206" level="project" />
@@ -38,12 +40,15 @@
     <orderEntry type="library" name="Deps: ring/ring-ssl:0.3.0" level="project" />
     <orderEntry type="library" name="Deps: com.taoensso/encore:3.45.0" level="project" />
     <orderEntry type="library" name="Deps: org.slf4j/jcl-over-slf4j:1.7.36" level="project" />
+    <orderEntry type="library" name="Deps: com.datomic/local:1.0.267" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/tools.analyzer.jvm:1.2.2" level="project" />
     <orderEntry type="library" name="Deps: org.wildfly.common/wildfly-common:1.5.2.Final" level="project" />
     <orderEntry type="library" name="Deps: org.apache.ant/ant-launcher:1.10.11" level="project" />
     <orderEntry type="library" name="Deps: com.fulcrologic/fulcro-i18n:1.0.1" level="project" />
+    <orderEntry type="library" name="Deps: com.cognitect/hmac-authn:0.1.210" level="project" />
     <orderEntry type="library" name="Deps: com.taoensso/tufte:2.4.5" level="project" />
     <orderEntry type="library" name="Deps: com.widdindustries/cljc.java-time:0.1.21" level="project" />
+    <orderEntry type="library" name="Deps: com.cognitect/anomalies:0.1.12" level="project" />
     <orderEntry type="library" name="Deps: com.googlecode.json-simple/json-simple:1.1.1" level="project" />
     <orderEntry type="library" name="Deps: org.jspecify/jspecify:0.2.0" level="project" />
     <orderEntry type="library" name="Deps: ring/ring-defaults:0.3.4" level="project" />
@@ -63,11 +68,14 @@
     <orderEntry type="library" name="Deps: com.yetanalytics/colossal-squuid:0.1.5" level="project" />
     <orderEntry type="library" name="Deps: org.ow2.asm/asm:9.2" level="project" />
     <orderEntry type="library" name="Deps: org.slf4j/jul-to-slf4j:1.7.36" level="project" />
+    <orderEntry type="library" name="Deps: com.datomic/query-stats:1.0.12" level="project" />
     <orderEntry type="library" name="Deps: thheller/shadow-util:0.7.0" level="project" />
+    <orderEntry type="library" name="Deps: vvvvalvalval/datomock:0.2.2" level="project" />
     <orderEntry type="library" name="Deps: com.cognitect/transit-js:0.8.874" level="project" />
     <orderEntry type="library" name="Deps: io.methvin/directory-watcher:0.17.1" level="project" />
     <orderEntry type="library" name="Deps: clj-tuple:0.2.2" level="project" />
     <orderEntry type="library" name="Deps: com.taoensso/truss:1.8.0" level="project" />
+    <orderEntry type="library" name="Deps: com.datomic/client:1.0.126" level="project" />
     <orderEntry type="library" name="Deps: ring/ring-headers:0.3.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/google-closure-library-third-party:0.0-20211011-0726fdeb" level="project" />
     <orderEntry type="library" name="Deps: com.fulcrologic/fulcro:3.6.6" level="project" />
@@ -83,12 +91,15 @@
     <orderEntry type="library" name="Deps: com.fzakaria/slf4j-timbre:0.3.21" level="project" />
     <orderEntry type="library" name="Deps: binaryage/devtools:1.0.6" level="project" />
     <orderEntry type="library" name="Deps: org.msgpack/msgpack:0.6.12" level="project" />
+    <orderEntry type="library" name="Deps: com.datomic/client-impl-shared:1.0.98" level="project" />
     <orderEntry type="library" name="Deps: com.widdindustries/cljs.java-time:0.1.20" level="project" />
     <orderEntry type="library" name="Deps: org.jboss.threads/jboss-threads:3.1.0.Final" level="project" />
     <orderEntry type="library" name="Deps: com.google.j2objc/j2objc-annotations:1.3" level="project" />
     <orderEntry type="library" name="Deps: com.taoensso/timbre:6.0.4" level="project" />
     <orderEntry type="library" name="Deps: com.cognitect/transit-clj:1.0.329" level="project" />
+    <orderEntry type="library" name="Deps: com.datomic/query-support:0.8.28" level="project" />
     <orderEntry type="library" name="Deps: args4j:2.33" level="project" />
+    <orderEntry type="library" name="Deps: org.fressian/fressian:0.6.7" level="project" />
     <orderEntry type="library" name="Deps: crypto-random:1.2.1" level="project" />
     <orderEntry type="library" name="Deps: ring/ring-codec:1.2.0" level="project" />
     <orderEntry type="library" name="Deps: thheller/shadow-client:1.3.3" level="project" />
@@ -106,6 +117,7 @@
     <orderEntry type="library" name="Deps: potemkin:0.4.6" level="project" />
     <orderEntry type="library" name="Deps: nrepl:1.0.0" level="project" />
     <orderEntry type="library" name="Deps: mount:0.1.17" level="project" />
+    <orderEntry type="library" name="Deps: com.fulcrologic/fulcro-rad-datomic:1.4.5" level="project" />
     <orderEntry type="library" name="Deps: org.slf4j/slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" name="Deps: com.google.re2j/re2j:1.3" level="project" />
     <orderEntry type="library" name="Deps: org.jboss.xnio/xnio-api:3.8.0.Final" level="project" />
@@ -114,6 +126,7 @@
     <orderEntry type="library" name="Deps: org.clojure/core.memoize:1.0.253" level="project" />
     <orderEntry type="library" name="Deps: camel-snake-kebab:0.4.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/data.priority-map:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: com.github.ben-manes.caffeine/caffeine:2.8.1" level="project" />
     <orderEntry type="library" name="Deps: cider/piggieback:0.5.3" level="project" />
     <orderEntry type="library" name="Deps: thheller/shadow-undertow:0.3.1" level="project" />
     <orderEntry type="library" name="Deps: com.google.code.findbugs/jsr305:3.0.2" level="project" />

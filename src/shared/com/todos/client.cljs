@@ -1,5 +1,6 @@
 (ns com.todos.client
   (:require
+    [com.todos.ui :as ui :refer [Root]]
     [com.fulcrologic.fulcro.algorithms.timbre-support :refer [console-appender prefix-output-fn]]
     [com.fulcrologic.fulcro.algorithms.tx-processing.synchronous-tx-processing :as sync]
     [com.fulcrologic.fulcro.algorithms.tx-processing.batched-processing :as btxn]
@@ -28,3 +29,15 @@
                  (with-react18)
                  (btxn/with-batched-reads)))
 
+(defn refresh []
+  (log/info "Reinstalling controls")
+  (setup-RAD app)
+  (comp/refresh-dynamic-queries! app)
+  (app/force-root-render! app))
+
+(defn init []
+  (log/info "Starting App")
+  (datetime/set-timezone! "America/Los_Angeles")
+  (app/set-root! app Root {:initialize-state? true})
+  (setup-RAD app)
+  (app/mount! app Root "app" {:initialize-state? false}))

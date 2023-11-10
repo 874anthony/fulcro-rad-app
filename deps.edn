@@ -33,16 +33,10 @@
  :aliases {:test      {:extra-paths ["src/shared-tests"]
                        :extra-deps  {fulcrologic/fulcro-spec {:mvn/version "3.1.12"}}}
 
-           :sql       {:extra-paths ["src/sql" "src/sql-tests"]
-                       :extra-deps  {com.h2database/h2              {:mvn/version "2.1.214" :exclusions [org.slf4j/slf4j-nop]}
-                                     com.fulcrologic/fulcro-rad-sql {:mvn/version "0.0.8-alpha"}}}
-
            :datomic   {:extra-paths ["src/datomic"]
                        :extra-deps  {com.datomic/local                  {:mvn/version "1.0.267"}
                                      com.fulcrologic/fulcro-rad-datomic {:mvn/version "1.4.5"}}}
-           :asami     {:extra-paths ["src/asami" "src/asami-tests"]
-                       :extra-deps  {cz.holyjak/fulcro-rad-asami {:git/url "https://github.com/holyjak/fulcro-rad-asami"
-                                                                  :sha     "46b6f59643db171be0aa2b3bdc72806935f0ece4"}}}
+
            :xtdb      {:extra-paths ["src/xtdb" "src/xtdb-tests"]
                        :extra-deps  {com.xtdb/xtdb-core                   {:mvn/version "1.22.1"}
                                      com.xtdb/xtdb-rocksdb                {:mvn/version "1.22.1"}
