@@ -36,8 +36,12 @@
   (app/force-root-render! app))
 
 (defn init []
+  (log/merge-config! {:output-fn prefix-output-fn
+                      :appenders  {:console (console-appender)}})
   (log/info "Starting App")
   (datetime/set-timezone! "America/Los_Angeles")
   (app/set-root! app Root {:initialize-state? true})
+  (dr/initialize! app)
   (setup-RAD app)
+  (history/install-route-history! app (new-html5-history {:app app}))
   (app/mount! app Root "app" {:initialize-state? false}))
