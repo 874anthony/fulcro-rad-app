@@ -14,6 +14,7 @@
     [com.wsscode.pathom.core :as p]
     [com.fulcrologic.rad.type-support.date-time :as dt]
     [com.wsscode.pathom.connect :as pc]
+    [com.todos.model.todo :as todo]
     ))
 
 (pc/defresolver index-explorer [{::pc/keys [indexes]} _]
@@ -40,4 +41,5 @@
                          {}))))}]
                [automatic-resolvers
                 form/resolvers
+                todo/resolvers
                 index-explorer]))
